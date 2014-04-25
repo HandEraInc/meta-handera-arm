@@ -1,4 +1,4 @@
-# Copyright (C) 2013 HandEra, Inc
+# Copyright (C) 2013-2014 HandEra, Inc
 # Released under the MIT license (see COPYING.MIT for the terms)
 require recipes-bsp/u-boot/u-boot.inc
 

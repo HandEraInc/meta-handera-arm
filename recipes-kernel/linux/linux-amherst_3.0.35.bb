@@ -1,4 +1,4 @@
-# Adapted from linux-imx.inc, copyright (C) 2013 O.S. Systems Software LTDA
+# Copyright (C) 2013-2014 HandEra, Inc
 # Released under the MIT license (see COPYING.MIT for the terms)
 
 require recipes-kernel/linux/linux-imx.inc
@@ -25,6 +25,5 @@ SRC_URI += "file://drm-vivante-Add-00-sufix-in-returned-bus-Id.patch \
 PR = "git${SRCPV}"
 PV = "3.0.35"
 S = "${WORKDIR}/git"
-
 
 COMPATIBLE_MACHINE = "(amherst)"
