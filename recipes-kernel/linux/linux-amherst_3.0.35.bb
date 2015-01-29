@@ -9,7 +9,7 @@ LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 SRCREV = "handera-imx_3.0.35_4.1.0"
-SRC_URI = "git://github.com/HandEraInc/handera-linux-imx6.git"
+SRC_URI = "git://github.com/HandEraInc/handera-linux-imx6.git;branch=handera-imx_3.0.35_4.1.0"
 SRC_URI += "file://defconfig"
 
 # Patches need for Yocto and not applied by Freescale when doing 4.1.0 branch

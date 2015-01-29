@@ -1,0 +1,12 @@
+diff --git a/src/video/vpu/src/vpudec.c b/src/video/vpu/src/vpudec.c index 6066ef8..2f0af18 100644
+--- a/src/video/vpu/src/vpudec.c
++++ b/src/video/vpu/src/vpudec.c
+@@ -180,7 +180,7 @@
+       G_STRUCT_OFFSET (VpuDecOption, adaptive_drop), "true"},
+   {PROP_FRAMES_PLUS, "frame-plus", "addtionlal frames",
+         "set number of addtional frames for smoothly playback", G_TYPE_INT,
+-      G_STRUCT_OFFSET (VpuDecOption, bufferplus), "6", "2", STR_MAX_INT},
++      G_STRUCT_OFFSET (VpuDecOption, bufferplus), "1", "1", STR_MAX_INT},
+   {PROP_OUTPUT_FORMAT, "output-format", "output format",
+         "set raw format for output",
+         G_TYPE_ENUM,
