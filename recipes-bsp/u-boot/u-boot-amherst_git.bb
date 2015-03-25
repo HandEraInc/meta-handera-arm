@@ -16,7 +16,7 @@ UBOOT_SUFFIX = "bin"
 UBOOT_PADDING = "2"
 
 SRCREV = "handera-imx_v2009.08_3.0.35_4.1.0"
-SRC_URI = "git://github.com/HandEraInc/handera-uboot-imx6.git"
+SRC_URI = "git://github.com/HandEraInc/handera-uboot-imx6.git;branch=handera-imx_v2009.08_3.0.35_4.1.0"
 
 UBOOT_MAKE_TARGET = "u-boot.bin"
 
@@ -30,3 +30,18 @@ do_compile_prepend() {
 		sed -i 's/$(CROSS_COMPILE)ld/$(CROSS_COMPILE)ld.bfd/g' config.mk
 	fi
 }
+
+do_compile_append() {
+   oe_runmake env
+}
+
+do_install_append() {
+                install -d ${D}${base_sbindir}
+                install -m 755 ${S}/tools/env/fw_printenv ${D}${base_sbindir}/fw_printenv
+                install -m 755 ${S}/tools/env/fw_printenv ${D}${base_sbindir}/fw_setenv
+}
+
+PACKAGES += "${PN}-fw-utils"
+FILES_${PN}-fw-utils += "${base_sbindir}/fw_printenv ${base_sbindir}/fw_setenv"
+
+
